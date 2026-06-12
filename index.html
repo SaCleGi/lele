@@ -1,316 +1,444 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Selamat Ulang Tahun, Sayang! ❤️</title>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="C:\Users\Saepudin\Pictures">
-    
-    <style>
-        :root {
-            --warna-utama: #ff4d6d;
-            --warna-muda: #fff0f3;
-            --warna-gelap: #590d22;
-            --teks: #2b2d42;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ANISA FARM| Anisa</title>
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: var(--warna-muda);
-            color: var(--teks);
-            overflow-x: hidden;
-        }
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
 
-        /* Musik Kontrol Floating Button */
-        .music-btn {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 1000;
-            background: var(--warna-utama);
-            color: white;
-            border: none;
-            padding: 12px;
-            border-radius: 50%;
-            cursor: pointer;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-            font-size: 1.2rem;
-        }
+:root{
+--primary:#0099ff;
+--secondary:#00c853;
+--dark:#0f172a;
+--light:#f8fafc;
+}
 
-        /* 1. Hero Section */
-        header {
-            height: 100vh;
-            /* GANTI URL DI BAWAH JIKA INGIN MENGGUNAKAN GAMBAR LATAR BELAKANG SENDIRI */
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1518199266791-5375a83190b7?q=80&w=1000') no-repeat center center/cover;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-            padding: 20px;
-        }
+body{
+background:#fff;
+color:#333;
+overflow-x:hidden;
+}
 
-        header h1 {
-            font-family: 'Great Vibes', cursive;
-            font-size: 4.5rem;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
-            animation: guncang 3s ease-in-out infinite alternate;
-        }
+header{
+position:fixed;
+top:0;
+width:100%;
+background:rgba(15,23,42,.95);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
 
-        header p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            letter-spacing: 2px;
-        }
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 8%;
+}
 
-        .btn-mulai {
-            background-color: var(--warna-utama);
-            color: white;
-            padding: 12px 30px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: 0.3s;
-            box-shadow: 0 4px 15px rgba(255, 77, 109, 0.4);
-        }
+.logo{
+font-size:28px;
+font-weight:800;
+color:white;
+}
 
-        .btn-mulai:hover {
-            transform: scale(1.05);
-            background-color: #ff758f;
-        }
+.logo span{
+color:var(--secondary);
+}
 
-        /* Bagian Umum */
-        section {
-            padding: 80px 20px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
+nav a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+font-weight:500;
+transition:.3s;
+}
 
-        .section-title {
-            font-family: 'Great Vibes', cursive;
-            font-size: 3.5rem;
-            text-align: center;
-            color: var(--warna-gelap);
-            margin-bottom: 40px;
-        }
+nav a:hover{
+color:var(--secondary);
+}
 
-        /* 2. Timeline Section */
-        .timeline {
-            position: relative;
-            margin: 40px 0;
-        }
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+url('images/foto1.jpg');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
+}
 
-        .timeline::after {
-            content: '';
-            position: absolute;
-            width: 2px;
-            background-color: var(--warna-utama);
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            margin-left: -1px;
-        }
+.hero-content h1{
+font-size:4rem;
+color:white;
+margin-bottom:15px;
+}
 
-        .timeline-item {
-            padding: 10px 40px;
-            position: relative;
-            background-color: inherit;
-            width: 50%;
-        }
+.hero-content h1 span{
+color:var(--secondary);
+}
 
-        .timeline-item::after {
-            content: '❤️';
-            position: absolute;
-            width: 25px;
-            height: 25px;
-            right: -17px;
-            background-color: var(--warna-muda);
-            top: 15px;
-            z-index: 10;
-            font-size: 1.2rem;
-        }
+.hero-content p{
+font-size:1.2rem;
+color:white;
+max-width:700px;
+margin:auto;
+}
 
-        .left { left: 0; text-align: right; }
-        .right { left: 50%; }
-        .right::after { left: -10px; }
+.btn{
+display:inline-block;
+margin-top:30px;
+padding:15px 35px;
+background:var(--secondary);
+color:white;
+text-decoration:none;
+border-radius:50px;
+font-weight:600;
+transition:.3s;
+}
 
-        .timeline-content {
-            padding: 20px;
-            background: white;
-            position: relative;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
+.btn:hover{
+transform:translateY(-3px);
+}
 
-        /* 3. Gallery Section */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            grid-gap: 20px;
-        }
+section{
+padding:90px 8%;
+}
 
-        .gallery-item {
-            overflow: hidden;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            position: relative;
-            height: 250px;
-        }
+.section-title{
+text-align:center;
+margin-bottom:50px;
+}
 
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: 0.5s;
-        }
+.section-title h2{
+font-size:2.5rem;
+color:var(--dark);
+}
 
-        .gallery-item:hover img {
-            transform: scale(1.1);
-        }
+.section-title p{
+color:#666;
+}
 
-        /* 4. Video Section */
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-            height: 0;
-            overflow: hidden;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
+.about-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
 
-        .video-container iframe, .video-container video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
+.about-grid img{
+width:100%;
+border-radius:20px;
+}
 
-        /* 5. Surat Cinta */
-        .love-letter {
-            background: white;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-            line-height: 1.8;
-            text-align: center;
-            font-size: 1.1rem;
-        }
+.about-text h3{
+font-size:2rem;
+margin-bottom:15px;
+color:var(--primary);
+}
 
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 40px;
-            background-color: var(--warna-gelap);
-            color: white;
-            margin-top: 50px;
-        }
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
 
-        /* Animasi Sederhana */
-        @keyframes guncang {
-            from { transform: translateY(0); }
-            to { transform: translateY(-10px); }
-        }
+.card{
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+transition:.3s;
+}
 
-        /* Responsif untuk HP */
-        @media screen and (max-width: 768px) {
-            header h1 { font-size: 3rem; }
-            .timeline::after { left: 31px; }
-            .timeline-item { width: 100%; padding-left: 70px; padding-right: 25px; text-align: left; }
-            .timeline-item::after { left: 18px; }
-            .right { left: 0%; }
-        }
-    </style>
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.card-content{
+padding:20px;
+}
+
+.card-content h3{
+margin-bottom:10px;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:15px;
+transition:.3s;
+cursor:pointer;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+.video-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+}
+
+video{
+width:100%;
+border-radius:15px;
+}
+
+.stats{
+background:linear-gradient(135deg,var(--primary),var(--secondary));
+color:white;
+}
+
+.stats-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+text-align:center;
+}
+
+.stat h3{
+font-size:3rem;
+}
+
+.contact-box{
+background:#f5f5f5;
+padding:40px;
+border-radius:20px;
+text-align:center;
+}
+
+.contact-box h3{
+margin-bottom:10px;
+}
+
+footer{
+background:var(--dark);
+color:white;
+text-align:center;
+padding:30px;
+}
+
+.whatsapp{
+position:fixed;
+right:20px;
+bottom:20px;
+width:65px;
+height:65px;
+background:#25D366;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:32px;
+text-decoration:none;
+color:white;
+box-shadow:0 5px 20px rgba(0,0,0,.3);
+z-index:999;
+}
+
+@media(max-width:768px){
+
+.hero-content h1{
+font-size:2.5rem;
+}
+
+.about-grid{
+grid-template-columns:1fr;
+}
+
+nav{
+display:none;
+}
+}
+</style>
 </head>
 <body>
 
-    <audio id="bgMusic" loop>
-        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-    </audio>
-    <button class="music-btn" onclick="toggleMusic()"><i id="musicIcon" class="fas fa-play"></i></button>
+<header>
+<div class="navbar">
+<div class="logo">TER<span>LESAAN</span></div>
 
-    <header>
-        <h1>Selamat Ulang Tahun, Sayang ❤️</h1>
-        <p>Sebuah tempat kecil untuk merayakan semua kenangan manis kita.</p>
-        <a href="#cerita" class="btn-mulai">Mulai Petualangan Kita</a>
-    </header>
+<nav>
+<a href="#home">Beranda</a>
+<a href="#about">Tentang</a>
+<a href="#produk">Produk</a>
+<a href="#galeri">Galeri</a>
+<a href="#video">Video</a>
+<a href="#kontak">Kontak</a>
+</nav>
+</div>
+</header>
 
-    <section id="cerita">
-        <h2 class="section-title">Kisah Kita</h2>
-        <div class="timeline">
-            <div class="timeline-item left">
-                <div class="timeline-content">
-                    <h3>14 Februari 2024</h3>
-                    <p><strong>Hari Pertama Bertemu:</strong> Hari di mana takdir mempertemukan kita. Senyummu hari itu adalah hal tercantik yang pernah aku lihat.</p>
-                </div>
-            </div>
-            <div class="timeline-item right">
-                <div class="timeline-content">
-                    <h3>1 Mei 2024</h3>
-                    <p><strong>Kencan Pertama:</strong> Di kedai kopi kecil itu, kita mengobrol berjam-jam seolah dunia milik kita berdua saja.</p>
-                </div>
-            </div>
-            <div class="timeline-item left">
-                <div class="timeline-content">
-                    <h3>20 Desember 2025</h3>
-                    <p><strong>Liburan Bersama:</strong> Momen tak terlupakan saat kita melihat matahari terbenam bersama. Aku tahu kamu adalah orangnya.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="hero" id="home">
+<div class="hero-content">
+<h1>ANISA<span>FARM</span></h1>
+<p>Anisa farm- Menyediakan benih lele unggul dan lele konsumsi berkualitas.</p>
 
-    <section id="galeri">
-        <h2 class="section-title">Galeri Kebahagiaan</h2>
-        <div class="gallery-grid">
-            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?q=80&w=500" alt="Foto 1"></div>
-            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=500" alt="Foto 2"></div>
-            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=500" alt="Foto 3"></div>
-            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=500" alt="Foto 4"></div>
-        </div>
-    </section>
+<a href="https://wa.me/6285782537834" class="btn">
+Hubungi Kami
+</a>
+</div>
+</section>
 
-    <section id="video">
-        <h2 class="section-title">Bioskop Mini Kita</h2>
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
-        </div>
-    </section>
+<section id="about">
+<div class="section-title">
+<h2>Tentang Kami</h2>
+<p>Peternakan lele terpercaya dari Kp. Cilegok</p>
+</div>
 
-    <section id="surat">
-        <h2 class="section-title">Untukmu, Hari Ini & Seterusnya</h2>
-        <div class="love-letter">
-            <p>Selamat ulang tahun untuk orang yang membuat duniaku jauh lebih cerah. Terima kasih sudah menjadi pasangan, sahabat, dan pendengar terbaikku. Di usiamu yang baru ini, aku berharap kamu selalu diliputi kebahagiaan, kesehatan, dan impian-impianmu satu per satu tercapai. Aku akan selalu ada di sini untuk mendukungmu. Aku menyayangimu lebih dari yang bisa diungkapkan oleh website ini. ❤️</p>
-        </div>
-    </section>
+<div class="about-grid">
+<img src="lele2.jpg" alt="Kolam Lele">
 
-    <footer>
-        <p>Dibuat dengan seluruh ❤️ oleh [Namamu] | 2026</p>
-    </footer>
+<div class="about-text">
+<h3>TERLESAAN</h3>
+<p>
+Kami bergerak di bidang budidaya lele dengan fokus pada kualitas,
+pelayanan, dan kepuasan pelanggan.
+Menyediakan benih lele unggul, lele konsumsi, dan lele siap panen.
+</p>
+</div>
+</div>
+</section>
 
-    <script>
-        const bgMusic = document.getElementById('bgMusic');
-        const musicIcon = document.getElementById('musicIcon');
+<section class="stats">
+<div class="stats-grid">
 
-        function toggleMusic() {
-            if (bgMusic.paused) {
-                bgMusic.play().catch(e => console.log("Musik butuh interaksi pengguna pertama kali"));
-                musicIcon.className = "fas fa-pause";
-            } else {
-                bgMusic.pause();
-                musicIcon.className = "fas fa-play";
-            }
-        }
-    </script>
+<div class="stat">
+<h3>10+</h3>
+<p>Kolam Budidaya</p>
+</div>
+
+<div class="stat">
+<h3>1000+</h3>
+<p>Pelanggan</p>
+</div>
+
+<div class="stat">
+<h3>5+</h3>
+<p>Tahun Pengalaman</p>
+</div>
+
+</div>
+</section>
+
+<section id="produk">
+<div class="section-title">
+<h2>Produk Kami</h2>
+</div>
+
+<div class="products">
+
+<div class="card">
+<img src="benih_lele.jpg">
+<div class="card-content">
+<h3>Benih Lele</h3>
+<p>Benih sehat dan berkualitas.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="lele_product.jpg">
+<div class="card-content">
+<h3>Lele Konsumsi</h3>
+<p>Segar dan siap dipasarkan.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="lele_panen.jpg">
+<div class="card-content">
+<h3>Lele Siap Panen</h3>
+<p>Ukuran seragam dan berkualitas.</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<section id="galeri">
+<div class="section-title">
+<h2>Galeri Foto</h2>
+</div>
+
+<div class="gallery">
+<img src="images/foto1.jpg">
+<img src="images/foto2.jpg">
+<img src="images/foto3.jpg">
+<img src="images/foto4.jpg">
+</div>
+</section>
+
+<section id="video">
+<div class="section-title">
+<h2>Galeri Video</h2>
+</div>
+
+<div class="video-grid">
+
+<video controls>
+<source src="videos/video1.mp4" type="video/mp4">
+</video>
+
+<video controls>
+<source src="videos/video2.mp4" type="video/mp4">
+</video>
+
+</div>
+</section>
+
+<section id="kontak">
+<div class="section-title">
+<h2>Hubungi Kami</h2>
+</div>
+
+<div class="contact-box">
+<h3>TERLESAAN</h3>
+<p>Kp. Cilegok</p>
+<p>WhatsApp: 085782537834</p>
+
+<br>
+
+<a href="https://wa.me/6285782537834" class="btn">
+Pesan Sekarang
+</a>
+</div>
+</section>
+
+<footer>
+<p>© 2026 TERLESAAN - Ternak Lele Saepudin Anisa</p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/6285782537834">
+☎
+</a>
+
 </body>
 </html>
